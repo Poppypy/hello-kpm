@@ -15,6 +15,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Fetch KernelPatch source
+        run: |
+          rm -rf third_party/KernelPatch
+          git clone --depth=1 https://github.com/bmax121/KernelPatch.git third_party/KernelPatch
+
       - name: Install Android NDK
         run: |
           cd ~

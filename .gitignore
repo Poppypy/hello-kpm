@@ -17,3 +17,5 @@
 *.elf
 
 *.kpm
+# Third-party deps (fetched in CI)
+third_party/KernelPatch/
